@@ -25,17 +25,29 @@ API RESTful para gerenciamento de produtos e pedidos, desenvolvida em **NestJS**
 
 Esse comando sobe um container PostgreSQL local conforme definido no arquivo `docker-compose.yml`.
 
-### 2. Instalar as dependências
+### 2. Configurar variáveis de ambiente
+
+Crie um arquivo `.env` na raiz do projeto com o seguinte conteúdo:
+
+    DATABASE_URL=postgresql://dev:dev@localhost:5432/produtos
+
+Essa variável define a conexão com o banco PostgreSQL que é iniciado via Docker.
+
+> ⚠️ O arquivo `.env` não é versionado no repositório.
+> Em produção, as variáveis de ambiente devem ser configuradas diretamente na plataforma de deploy.
+
+
+### 3. Instalar as dependências
 
     npm install
 
-### 3. Executar as migrations do banco
+### 4. Executar as migrations do banco
 
     npm run prisma:migrate
 
 As tabelas serão criadas automaticamente a partir do `schema.prisma`.
 
-### 4. Subir a aplicação
+### 5. Subir a aplicação
 
     npm run start:dev
 
