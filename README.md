@@ -14,6 +14,7 @@ API RESTful para gerenciamento de produtos e pedidos, desenvolvida em **NestJS**
 - Docker
 - Jest
 - Swagger (OpenAPI)
+- Middleware global para logging de requisições HTTP
 
 ---
 
